@@ -1,4 +1,4 @@
-import 'package:drones/colors.dart';
+import 'package:drones/theme/colors.dart';
 import 'package:flutter/material.dart';
 
 TextStyle largeText({Color? color}) {
@@ -36,21 +36,3 @@ TextStyle mediumText({double? size, Color? color}) {
     color: color ?? AppColors.textColor,
   );
 }
-
-// TextStyle smallText() {
-//   return const TextStyle( 
-//     fontWeight: FontWeight.w400,
-//     fontSize: 14,
-//     fontStyle: FontStyle.normal,
-//     color: AppColors.blackColor,
-//   );
-// }
-
-// TextStyle tinyText() {
-//   return const TextStyle( 
-//     fontWeight: FontWeight.w400,
-//     fontSize: 12,
-//     fontStyle: FontStyle.normal,
-//     color: AppColors.blackColor,
-//   );
-// }

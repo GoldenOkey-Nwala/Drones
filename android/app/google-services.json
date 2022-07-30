@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1074323311220",
+    "project_id": "drones-cee06",
+    "storage_bucket": "drones-cee06.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1074323311220:android:c5c06980a1af67c2b25f21",
+        "android_client_info": {
+          "package_name": "com.golden_codes.drones"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1074323311220-5qag2lkabim70ut5il7l8u7900nhkbo9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtXAVXtcj--OZ5LuUdxN_JRR3DAuDeg40"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1074323311220-5qag2lkabim70ut5il7l8u7900nhkbo9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

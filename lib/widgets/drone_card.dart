@@ -1,5 +1,5 @@
-import 'package:drones/style.dart';
-import 'package:drones/widgets.dart';
+import 'package:drones/theme/style.dart';
+import 'package:drones/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 

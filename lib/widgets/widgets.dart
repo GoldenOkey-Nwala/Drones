@@ -1,5 +1,5 @@
-import 'package:drones/colors.dart';
-import 'package:drones/style.dart';
+import 'package:drones/theme/colors.dart';
+import 'package:drones/theme/style.dart';
 import 'package:flutter/material.dart';
 
 Widget properties(String image, String text) {
