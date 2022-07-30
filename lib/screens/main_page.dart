@@ -51,11 +51,12 @@ class _MainPageState extends State<MainPage> {
               TextField(decoration: textFieldDecoration('Search')),
               const SizedBox(height: 30),
               const DroneCard(),
-              StreamBuilder(
+              const SizedBox(height: 30),
+              StreamBuilder<List<DroneListing>>(
                 stream: readUsers(),
                 builder: (context, snapshot) {
                   if (snapshot.hasError) {
-                    return Text('Something went wrong! ${snapshot.hasError}');
+                    return Text('Something went wrong! ${snapshot.error}');
                   } else if (snapshot.hasData) {
                     final users = snapshot.data!;
 
