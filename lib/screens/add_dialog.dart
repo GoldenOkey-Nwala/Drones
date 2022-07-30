@@ -125,8 +125,7 @@ AlertDialog addDialog(BuildContext context) {
             speed: '${speedController.text} km/hr',
             manufacturer: manufacturerController.text,
           );
-          createUser(user);
-
+          createUser(user); 
           Navigator.of(context).pop();
         },
         text: 'Add Drone',

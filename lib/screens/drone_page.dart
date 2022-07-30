@@ -8,20 +8,21 @@ import 'package:drones/widgets/drone_listing.dart';
 import 'package:drones/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
-class MainPage extends StatefulWidget {
-  const MainPage({Key? key}) : super(key: key);
+class DronePage extends StatefulWidget {
+  const DronePage({Key? key}) : super(key: key);
 
   @override
-  State<MainPage> createState() => _MainPageState();
+  State<DronePage> createState() => _DronePageState();
 }
 
-class _MainPageState extends State<MainPage> {
+class _DronePageState extends State<DronePage> {
+  
   Stream<List<DroneListing>> readUsers() => FirebaseFirestore.instance
       .collection('drones')
       .snapshots()
       .map((snapshot) => snapshot.docs
           .map((doc) => DroneListing.fromJson(doc.data()))
-          .toList());
+          .toList()); 
 
   @override
   Widget build(BuildContext context) {
@@ -56,16 +57,20 @@ class _MainPageState extends State<MainPage> {
                 stream: readUsers(),
                 builder: (context, snapshot) {
                   if (snapshot.hasError) {
+                  // final users = snapshot.data!;  
+                   print(snapshot.data); 
                     return Text('Something went wrong! ${snapshot.error}');
-                  } else if (snapshot.hasData) {
-                    final users = snapshot.data!;
+                  } else 
+                  if (!snapshot.hasData) {
+                  final users = snapshot.data;  
+                    
 
                     return ListView(
-                      children: users.map(addDrone).toList(),
+                      children: users!.map(addDrone).toList(),
                     );
                   } else {
                     return const Center(child: CircularProgressIndicator());
-                  }
+                  } 
                 },
               ),
             ]),
